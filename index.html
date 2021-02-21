@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" >
+   
+	<title></title>
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Sriracha&display=swap');
+body{
+	margin: 0;
+	padding:0;
+	font-family: 'Sriracha', cursive;
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    animation: jello 1s 1;
+}
+ 
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  max-height: 800px;
+  padding: 25px;
+  box-shadow: 0 4px 4px black;
+  top:0;
+  background-image: url('psg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.staff{
+  padding-top: 300px;
+	text-align: center;
+	display: flex;
+  background-image: url(b3.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+	justify-content: space-around;
+}
+.hod{
+	text-align: center;
+	background-image: url(a.jpg);
+  background-size: cover;
+	width:800px;
+	height:800px;
+	color:white;
+}
+h5{
+  font-size: 25px;
+  color:black;
+}
+h4,pre,h3{color:white;}
+.hod h2{
+  margin-top: 50px;
+	font-size: 30px;
+}
+.stf{
+  margin-left:30px; 
+  display: flex;
+  flex-wrap: wrap;
+  color:#1d1d21;
+}
+.stf img{
+  width:300px;
+  height:300px;
+  margin-left: 30px;
+}
+
+.about{
+  justify-content: space-around;
+   display: flex; 
+  margin:auto;
+  flex-wrap: wrap;
+  background-color:white;
+  position:relative;
+  color:blue;
+   border: solid skyblue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+   padding-bottom: 20px;
+  max-width: 80%;
+  
+}
+.ab1 ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+   
+}
+.ab1 ul li{
+  list-style-type: none;
+  padding: 30px;
+  margin-left: 5px;
+  border:4px solid skyblue;
+  cursor: pointer; 
+}
+.ab2{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+   
+}
+ .ab2 ul li{
+  list-style-type: none;
+  cursor: pointer;
+}
+.center{
+  color:white;
+}
+.events{
+  display: flex;
+  flex-direction: row;
+   justify-content: space-around;
+   max-width: 100%;
+   padding-top: 100px;
+   padding-bottom: 100px;
+}
+.eve img:hover{
+   transform: scale(1.1);
+  transition: .5s;
+}
+.eve{
+  width:300px;
+  border:2px solid blue;
+  margin-left: 10px;
+  background-color: white; 
+  height:400px;
+}
+.eve h3{
+  color:black;
+}
+.center{
+  padding-top:150px;
+  padding-bottom: 150px; 
+  background-attachment: fixed;
+  background-image: url('a2.jpg');
+  background-repeat: no-repeat;
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+}
+.events{
+  background-image: url('b.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.margin-left{
+  display: flex;
+  justify-content: space-between;
+}
+.footer{
+  display: flex;
+   background: skyblue;
+  background-image: url(b.jpg);
+  justify-content: space-between;
+  background-size: cover;
+}
+.f1,.f2{
+  flex:1; 
+}
+.f1 p{
+  background: white;
+  color:blue;
+  border-radius: 10px;
+  width:150px;
+  text-align: center;
+  margin-left:80px;
+}
+.f1 p:hover{
+  transform: scale(1.1);
+  transition: .5s;
+}
+.f3{
+  flex:2;
+}
+.f1,.f2,.f3{
+  color:white;
+  padding-top: 30px;
+  text-align: center;
+  margin:20px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    padding-bottom: 700px;
+    padding-top: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo{
+    cursor: pointer;
+}
+
+ .logo  img{
+     margin-top: 20px;
+}
+
+nav .navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .navigation ul{ 
+    display: flex;
+    z-index: 1;
+}
+
+nav .navigation ul li{
+    list-style-type: none;
+    margin: 0 1px;
+}
+
+nav .navigation ul li a{
+    display: block;
+    padding: 1px 10px;
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
+    position: relative;
+}
+
+nav .navigation ul li a.active::before{
+    height: 90%;
+}
+
+nav .navigation ul li a::before{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background: #30bfff;
+}
+
+/*nav .navigation ul li a:hover::before{
+    height: 90%;
+    transition: .2s;
+}*/
+
+nav .navigation .hamburger{
+    position: relative;
+    width: 25px;
+    height: 3px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+    color: white;
+    background: black;
+}
+.hamburger::after{
+  background:black;
+  position: fixed;
+}
+
+nav .navigation .hamburger::before,.hamburger::after{
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 25px;
+    background: black;
+    border-radius: 10px;
+    transition: .1s;
+}
+
+nav .navigation .hamburger::before{
+    right: 0;
+    top: -8px;
+}
+
+nav .navigation .hamburger::after{
+    left: 0;
+    top: 8px;
+}
+
+nav .navigation .toogle-menu{
+    position: absolute;
+    width: 30px;
+    opacity: 0;
+    z-index: 3;
+    cursor: pointer;
+}
+
+nav .navigation .hamburger,.toogle-menu{
+    display: none;
+}
+
+nav .navigation input:checked ~ .hamburger{
+    background: transparent;
+}
+
+nav .navigation input:checked ~ .hamburger::before{
+    top: 0;
+    transform: rotate(45deg);
+    width: 25px;
+}
+
+nav .navigation input:checked ~ .hamburger::after{
+    top: 0;
+    transform: rotate(-45deg);
+    width: 25px;
+}
+
+nav .navigation input:checked ~ ul{
+    right: 0;
+    transition: .4s;
+}
+
+ 
+@media screen and (max-width: 1000px){
+    .slideshow-container{
+      background-size: cover;
+      background-position: center;
+    }
+     nav{
+        justify-content: space-between;
+    }
+
+    nav .navigation .hamburger,.toogle-menu{
+        display: block;
+    }
+
+    nav .navigation ul{ 
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        background: black;
+        width: 100%;
+        z-index: 10;
+        top:30px;
+        right: -120%;
+        padding: 70px 10px;
+        box-sizing: border-box;
+    }
+
+    nav .navigation ul li{ 
+        display: block;
+        padding: 20px 17px;
+        border-bottom: 1px solid rgb(51, 50, 50);
+        text-align: center;
+    }
+    .hod{
+      flex-wrap: wrap;
+    }
+     .about{
+      max-width: 80%;
+      margin-bottom: 50px;
+    }
+    .ab1 ul{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .ab1 ul li{
+         width:300px;
+       margin-bottom: 20px;
+    }
+    .ab1 .ab2 h2{
+      font-size: 15px;
+    }
+    .stf{
+       margin-top: 50px;
+       justify-content: space-around;
+    }
+    .staff{
+      margin-top: 100px;
+      flex-wrap: wrap;
+    }
+    .close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+}
+@media screen and (max-width: 800px){
+  .slideshow-container{
+      background-size: cover;
+      background-position: center;
+    }
+     nav{
+        justify-content: space-between;
+    }
+
+    nav .navigation .hamburger,.toogle-menu{
+        display: block;
+    }
+
+    nav .navigation ul{ 
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        background: black;
+        width: 100%;
+        z-index: 10;
+        top:30px;
+        right: -120%;
+        padding: 70px 10px;
+        box-sizing: border-box;
+    }
+
+    nav .navigation ul li{ 
+        display: block;
+        padding: 20px 17px;
+        border-bottom: 1px solid rgb(51, 50, 50);
+        text-align: center;
+    }
+    .hod{
+      flex-wrap: wrap;
+    }
+     .about{
+      max-width: 80%;
+      margin-bottom: 50px;
+    }
+    .ab1 ul{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .ab1 ul li{
+         width:300px;
+       margin-bottom: 20px;
+    }
+    .ab1 .ab2 h2{
+      font-size: 15px;
+    }
+    .stf{
+       margin-top: 50px;
+       justify-content: space-around;
+    }
+    .staff{
+      margin-top: 100px;
+      flex-wrap: wrap;
+    }
+
+}
+@media screen and (max-width: 500px)
+{
+  .slideshow-container{
+    margin-bottom: 50px;
+    margin-top: 0;
+  }
+    nav{
+        justify-content: space-between;
+    }
+
+    nav .navigation .hamburger,.toogle-menu{
+        display: block;
+    }
+
+    nav .navigation ul{ 
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        background: black;
+        width: 100%;
+        z-index: 10;
+        right: -120%;
+        padding: 70px 10px;
+        box-sizing: border-box;
+    }
+
+    nav .navigation ul li{ 
+        display: block;
+        padding: 20px 17px;
+        border-bottom: 1px solid rgb(51, 50, 50);
+        text-align: center;
+    }  
+    .hod{
+      margin-top: 70px;
+       }
+    .about{
+      max-width: 400px;
+    }
+    .ab1 ul{
+      flex-wrap: wrap;
+      justify-content: center;
+
+    }
+    .ab1 .ab2 h2{
+      font-size: 15px;
+
+    }
+    .ab1 ul li{
+         max-width:300px;
+       margin-bottom: 20px;
+    }
+     
+    .stf{
+       margin-top: 50px;
+    }
+    .staff{
+      z-index: -1;
+      margin-top: 200px;
+      flex-wrap: wrap;
+    }
+    .events{
+      flex-wrap: wrap;
+      max-width: 100%;
+      background-position: center;
+    }
+    .eve{
+      margin-bottom: 10px;
+      width: 600px;
+    }
+    .footer{
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .f1 .f2 .f3{
+      width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+  <div class="slideshow-container">
+	<nav>
+		<div class="logo">
+			<div><img src="psglogo.jpg" style="width:100px;height:100px;"></div>
+		</div>
+      <div class="navigation">
+               <input type="checkbox" class="toogle-menu">
+                <div class="hamburger"></div>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Login</a></li>
+			</ul>
+		</div>
+  </nav>
+  <div class="about" align="center">
+    <div class="ab1">
+        <h2>FUTURE GREYHOUNDS \\\</h2>
+        <br>
+        <ul>
+          <li>UNDERGRADUATE STUDIES</li>
+          <li>GRADUATE STUDIES</li>
+          <li>CONTINUING EDUCATION</li>
+        </ul>
+    </div>
+    <div class="ab2">
+      <h2>CURRENT GREYHOUNDS \\\</h2>
+      <ul>
+        <li>Students</li>
+        <li>Faculty&Staff</li>
+        <li>Alumini</li>
+        <li>Parents</li>
+      </ul>
+    </div>
+</div>
+</div>
+
+<div class="staff">
+	<div class="hod">
+		<h2>OUR EXPERT</h2>
+      <div><img src="pic1(2).jpg" style="max-width:400px;height:400px;">
+        <br>
+        <br>
+        <h3>ROBERT</h3>
+        <pre>Chief Executive Officer</pre>
+	</div>
+</div>
+  <div class="stf">
+    <div><img src="pic3(2).jpg">
+      <h4>TAYLOR</h4>
+      <pre>Co-manager associate</pre>             
+    </div>
+    <div><img src="pic3(3).jpg">
+      <h4>TAYLOR</h4>
+      <pre>Co-manager associate</pre>             
+    </div>
+    <div><img src="pic4(2).jpg">
+      <h4>TAYLOR</h4>
+      <pre>Co-manager associate</pre>             
+    </div>
+    <div><img src="pic5(2).jpg">
+      <h4>TAYLOR</h4>
+      <pre>Co-manager associate</pre>             
+    </div>
+  </div>
+</div>
+<br>
+<div class="center">
+   <h2>Steve Jobs</h2><p>  “People think focus means saying yes to the thing you've got to focus on. But that's not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully."
+</p>
+ </div>
+ <br>
+ <div class="events">
+   <div class="eve" align="center">
+     <h2>Event1</h2>
+     <img src="psglogo.jpg" style="max-width:200px;height:200px;">
+     <h3>Event Name</h3>
+   </div>
+   <div class="eve" align="center">
+     <h2>Event1</h2>
+     <img src="psglogo.jpg" style="max-width:200px;height:200px;">
+     <h3>Event Name</h3>
+   </div>
+   <div class="eve" align="center">
+     <h2>Event1</h2>
+     <img src="psglogo.jpg" style="max-width:200px;height:200px;">
+     <h3>Event Name</h3>
+   </div>
+ </div>
+ <div style="background: white; color: black;width: 100%; padding:30px" class="bor">
+    <div class="margin-left">
+  <div class="bo"> <h5>13000</h5>
+    <br>
+  Total Students
+</div>
+  <br><br>
+  <div class="bo">
+  <h5>500</h5><br>
+   Total Staffs
+</div>
+  <br><br>
+  <div class="bo">
+  <h5>295</h5><br>
+  WORKING DAYS
+</div>
+</div>
+  <br>
+</div>
+</div>
+<div class="footer">
+  <div class="f1">
+    <img src="psglogo.jpg" style="width:150px;height: 150px;">
+    <br>
+    <br>
+    <p style="">Contact Us</p>
+  </div>
+<div class="f2">
+  <h4 style="font-size: 20px;">ADDRESS//</h4>
+  <br>
+  <h4>Post Box No.1611</h4>
+  <br>
+  <h4>Airport Road</h4>
+  <br>
+  <h4>Coimbatore-641004</h4>
+  <br>
+  <h4>0422-9874562,1234567</h4>
+  <br>
+  <h4><a href="">psgcas.ac.in</a></h4>
+</div>
+<div class="f3">
+  <h3>FOLLOW PSG CAS ON//</h3>
+</div>
+</div>
+</body>
+</html>
